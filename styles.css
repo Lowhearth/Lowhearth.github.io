@@ -1,0 +1,46 @@
+@keyframes BodyFadeIn {
+  from {
+    background-color: #3d3d3d;
+  }
+
+  to {
+    background-color: #2b2b2b;
+  }
+}
+
+@keyframes CanvasFadeIn {
+  from {
+    background-color: #3d3d3d;
+  }
+
+  to {
+    background-color: rgb(246, 231, 188);
+  }
+}
+
+@keyframes WakeUp {
+  from {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 0px 0px 0px;
+  }
+
+  to {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+}
+
+body {
+  animation: BodyFadeIn 0.75s ease-in-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  height: 100vh;
+}
+
+canvas {
+  border: solid 5px #4a4a4a;
+  border-radius: 2px;
+  animation: WakeUp 0.75s ease-in-out forwards,
+    CanvasFadeIn 1.5s ease-in-out forwards;
+  z-index: 3;
+}
